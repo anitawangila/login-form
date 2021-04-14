@@ -1,0 +1,226 @@
+.sign-in{
+    width: 320px;
+    height: 640px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    background-color: grey;
+    box-shadow: 6px 6px 30px rgb(100, 83, 83);
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1;
+}
+.bg-circule{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: -40%;
+    border-radius: 50%;
+    left: 60%;
+    background-color: #ecf0f3;
+    transform: translateX(-60%);
+}
+.main-page{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-image: url("../images/ann.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 6;
+}
+.top-bar{
+    width: 180px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    border-radius: 0px 0px 20px 20px;
+    transform: translateX(-50%);
+    background-color: grey;
+}
+.title{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: montserrat;
+}
+.title h1{
+    font-size: 3em;
+    color: #000;
+    margin: 0px;
+    letter-spacing: 2px;
+}
+.title p{
+    color: #000;
+    font-size: 1.2em;
+}
+.form-btns{
+position: absolute;
+left: 50%;
+bottom: 50px;
+text-align: center;
+transform: translateX(-50%);
+}
+.f-btn, .s-btn{
+width: 230px;
+height: 42px;
+margin: 5px 0px;
+border: none;
+outline: none;
+border-radius: 20px;
+font-family: montserrat;
+text-transform: uppercase;
+font-size: 0.9rem;
+letter-spacing: 1px;
+font-weight: 700;
+box-shadow: 2px 2px 30px rgba(0,0,0,0.5);
+}
+.f-btn{
+    color: #fff;
+    background-color: #1863ef;
+    margin-bottom: 20px;
+}
+.s-btn{
+    color: #171717;
+    background-color: #fff;
+}
+.new-btn{
+    color: rgba(252, 252,252, 0.8);
+    letter-spacing: 1px;
+    font-family: montserrat;
+    text-decoration: none;
+}
+buttton:active{
+    transform: scale(1.05);
+}
+/*.form-btns{
+    display: none;
+}*/
+.main-page{
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: 2px 6px 12px #d1d9e6;
+}
+.cancel{
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    box-shadow: 2px 6px 20px rgba(0,0,0,0.12);
+}
+.cancel i{
+    color: #111;
+}
+.sign-in-page form,
+.sign-up-page form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+.sign-in-page,
+.sign-up-page{
+    width: 100%;
+    height: 45%;
+}
+.sign-in-page input
+.sign-up-page input{
+    width: 220px;
+    height: 40px;
+    margin: 5px 0px;
+    outline: none;
+    color: #191919;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.sign-in-page input::placeholder,
+.sign-up-page input::placeholder{
+    letter-spacing: 2px;
+    font-family: montserrat;
+    font-size: 15px;
+
+}
+.sign-in-page button,
+.sign-up-page button{
+    width: 220px;
+    height: 40px;
+    font-family: montserrat;
+    margin: 10px 0px;
+    border: none;
+    box-shadow: 12px 12px 30px rgba(0,0,0,0.1);
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.sign-in-page input :focus,
+.sign-up-page input :focus{
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+.sign-in-page button:hover,
+.sign-up-page button:hover{
+    background-color: #36d7a2;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+.sign-in-page,.sign-up-page,.cancel{
+    display: none;
+}
+.active-sign-in .form-btns,
+.active-sign-up .form-btns{
+    display: none;
+}
+.active-sign-in .main-page,
+.active-sign-up .main-page{
+    height: 55%;
+    animation: main 0.3s linear;
+    border-radius: 0% 0% 50% 50%/0% 0% 20% 20%;
+}
+.active-sign-in .sign-in-page,
+.active-sign-in .cancel{
+    display: flex;
+}
+.active-sign-in .cancel i,
+.active-sign-up .cancel i{
+animation: cancel 0.5s;
+}
+.active-sign-up .sign-up-page,
+.active-sign-up .cancel{
+    display: flex;
+}
+@keyframes main{
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 55%;
+    }
+
+}
+@keyframes cancel{
+    0%{
+opacity: 0;
+transform: rotate(-190deg);
+    }
+    100%{
+opacity: 1;
+transform: rotate(0deg);
+    }
+}
